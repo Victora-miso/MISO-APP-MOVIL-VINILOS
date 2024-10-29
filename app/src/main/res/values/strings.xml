@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MisoAppVinilos</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="album_cover">Album Cover</string>
+    <string name="error_loading_albums">Error loading albums</string>
+    <string name="error_loading_album_details">Error loading album details</string>
 </resources>
