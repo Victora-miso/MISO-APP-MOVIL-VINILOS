@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_album_list">
+
+    <fragment
+        android:id="@+id/fragment_album_list"
+        android:name="com.alphazetakapp.misoappvinilos.ui.album.list.AlbumListFragment"
+        android:label="Albums">
+        <action
+            android:id="@+id/action_albumList_to_detail"
+            app:destination="@id/fragment_album_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_album_detail"
+        android:name="com.alphazetakapp.misoappvinilos.ui.album.detail.AlbumDetailFragment"
+        android:label="Album Detail">
+        <argument
+            android:name="albumId"
+            app:argType="integer" />
+    </fragment>
+</navigation>
