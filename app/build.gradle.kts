@@ -77,6 +77,12 @@ dependencies {
 
     // Glide for images
     implementation(libs.bumptech.glide)
+
+    // Room
+    implementation(libs.androidx.room.common)
+    implementation(libs.androidx.room.ktx)
+    implementation("androidx.room:room-runtime:${libs.versions.roomCommon.get()}")
+    kapt("androidx.room:room-compiler:${libs.versions.roomCommon.get()}")
 }
 
 
