@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- Permite localhost, IP de la máquina anfitriona en el emulador -->
+        <domain includeSubdomains="true">10.0.2.2</domain>
+
+        <!-- Permite una IP local específica (ajústala a tu red) -->
+        <domain includeSubdomains="true">192.168.x.x</domain>
+
+        <!-- Permite localhost para pruebas en dispositivos físicos conectados directamente -->
+        <domain includeSubdomains="true">localhost</domain>
+    </domain-config>
+</network-security-config>

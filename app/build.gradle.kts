@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id ("kotlin-kapt")
+    id("kotlin-kapt")
     alias(libs.plugins.navigation.safeargs)
     alias(libs.plugins.hilt)
 }
@@ -70,6 +70,7 @@ dependencies {
     //Dagger Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
+    kapt(libs.androidx.room.compiler)
 
     //Navigation
     implementation(libs.navigation.fragment)
