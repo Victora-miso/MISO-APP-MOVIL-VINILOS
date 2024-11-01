@@ -4,10 +4,9 @@
         <!-- Permite localhost, IP de la máquina anfitriona en el emulador -->
         <domain includeSubdomains="true">10.0.2.2</domain>
 
-        <!-- Permite una IP local específica (ajústala a tu red) -->
-        <domain includeSubdomains="true">192.168.x.x</domain>
+        <domain includeSubdomains="true">192.168.0.0/16</domain>
 
         <!-- Permite localhost para pruebas en dispositivos físicos conectados directamente -->
         <domain includeSubdomains="true">localhost</domain>
     </domain-config>
-</network-security-config>
+</network-security-config>  

@@ -4,4 +4,6 @@
     <string name="album_cover">Album Cover</string>
     <string name="error_loading_albums">Error loading albums</string>
     <string name="error_loading_album_details">Error loading album details</string>
+    <string name="Albums">Albums</string>
+    <string name="Artists">Artists</string>
 </resources>
