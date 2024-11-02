@@ -1,5 +1,5 @@
 # MISO-APP-MOVIL-VINILOS
-¿Cómo construir la aplicación de forma local?
+## ¿Cómo construir la aplicación de forma local?
 
 1. Abrir el Android Studio
 2. Ir a archivo, nuevo proyecto y seleccionar "Project form Version Control":
@@ -15,6 +15,14 @@
    ![image](https://github.com/user-attachments/assets/24e69f66-ecb2-4e78-9c24-26e7f19c57eb)
 
 6. Esperamos que termine de construir el proyecto y vamos a la parte superior derecha para ejecutar el aplicativo:
+
+   ![image](https://github.com/user-attachments/assets/31907757-dbc7-42f4-8e6a-150e3d1dd1ca)
+
+7. Al darle click se abrira una ventana como la siguiente donde muestra el aplicativo corriendo en un emulador:
+
+   ![image](https://github.com/user-attachments/assets/c96c3372-282f-4dfc-be82-7c4667c21740)
+
+
 
 
 
