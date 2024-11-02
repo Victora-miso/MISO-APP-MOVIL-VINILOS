@@ -11,9 +11,10 @@
    Posteriormente damos click en "Clone"
 
 4. Ahora es necesario construir el proyecto, para ello vamos a la parte izquierda inferior de la pantalla y damos clic en el martillo:
+
    ![image](https://github.com/user-attachments/assets/24e69f66-ecb2-4e78-9c24-26e7f19c57eb)
 
-5. Esperamos que termine de construir el proyecto y vamos a la parte superior derecha para ejecutar el aplicativo:
+6. Esperamos que termine de construir el proyecto y vamos a la parte superior derecha para ejecutar el aplicativo:
 
 
 
