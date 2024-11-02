@@ -1,4 +1,4 @@
-package com.alphazetakapp.misoappvinilos.ui.album.list
+package com.alphazetakapp.misoappvinilos.ui.artist.list
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,27 +12,27 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alphazetakapp.misoappvinilos.R
-import com.alphazetakapp.misoappvinilos.databinding.FragmentAlbumListBinding
+import com.alphazetakapp.misoappvinilos.databinding.FragmentMusicianListBinding
 import dagger.hilt.android.AndroidEntryPoint
 import androidx.core.view.MenuProvider
 import android.widget.Toast
 import androidx.lifecycle.Lifecycle
-import com.alphazetakapp.misoappvinilos.ui.artist.list.MusicianListFragmentDirections
+
+
 
 @AndroidEntryPoint
-class AlbumListFragment : Fragment() {
-
-    private var _binding: FragmentAlbumListBinding? = null
+class MusicianListFragment : Fragment() {
+    private var _binding: FragmentMusicianListBinding? = null
     private val binding get() = _binding!!
-    private val viewModel: AlbumListViewModel by viewModels()
-    private lateinit var albumAdapter: AlbumAdapter
+    private val viewModel: MusicianListViewModel by viewModels()
+    private lateinit var musicianAdapter: MusicianAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentAlbumListBinding.inflate(inflater, container, false)
+        _binding = FragmentMusicianListBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -40,25 +40,25 @@ class AlbumListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
         setupObservers()
-        viewModel.loadAlbum()
+        viewModel.loadMusician()
     }
 
     private fun setupRecyclerView() {
-        albumAdapter = AlbumAdapter { album ->
+        musicianAdapter = MusicianAdapter { musician ->
             // Por ahora solo mostraremos un log
-            val action = AlbumListFragmentDirections.actionAlbumListToDetail(album.id)
+            val action = MusicianListFragmentDirections.actionMusicianListToDetail(musician.id)
             findNavController().navigate(action)
         }
 
-        binding.albumsRecyclerView.apply {
-            adapter = albumAdapter
+        binding.musiciansRecyclerView.apply {
+            adapter = musicianAdapter
             layoutManager = LinearLayoutManager(context)
         }
     }
 
     private fun setupObservers() {
-        viewModel.albums.observe(viewLifecycleOwner) { albums ->
-            albumAdapter.submitList(albums)
+        viewModel.musicians.observe(viewLifecycleOwner) { musicians ->
+            musicianAdapter.submitList(musicians)
         }
 
         viewModel.loading.observe(viewLifecycleOwner) { isLoading ->

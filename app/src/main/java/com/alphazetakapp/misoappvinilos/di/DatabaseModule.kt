@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import com.alphazetakapp.misoappvinilos.data.local.AppDatabase
 import com.alphazetakapp.misoappvinilos.data.local.dao.AlbumDao
+import com.alphazetakapp.misoappvinilos.data.local.dao.MusicianDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -31,6 +32,11 @@ object DatabaseModule {
     fun provideAlbumDao(database: AppDatabase): AlbumDao { // Receives the database provided by the previous method
         return database.albumDao()  // Returns the DAO for accessing the album table
                                     // Gets the DAO from the database
+    }
+
+    @Provides
+    fun provideMusicianDao(database: AppDatabase): MusicianDao { // Nuevo método
+        return database.musicianDao() // Obtener MusicianDao de la base de datos
     }
 
 }

@@ -21,4 +21,29 @@
             android:name="albumId"
             app:argType="integer" />
     </fragment>
+
+    <fragment
+        android:id="@+id/fragment_musician_list"
+        android:name="com.alphazetakapp.misoappvinilos.ui.artist.list.MusicianListFragment"
+        android:label="MusicianListFragment">
+        <action
+            android:id="@+id/action_MusicianList_to_detail"
+            app:destination="@id/fragment_musician_detail" >
+            <argument
+                android:name="musicianId"
+                app:argType="string" />
+
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_musician_detail"
+        android:name="com.alphazetakapp.misoappvinilos.ui.artist.detail.MusicianDetailFragment"
+        android:label="Musician Detail">
+        <argument
+            android:name="musicianId"
+            app:argType="string" />
+    </fragment>
+
+
 </navigation>

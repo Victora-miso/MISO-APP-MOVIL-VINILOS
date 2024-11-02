@@ -1,5 +1,6 @@
 package com.alphazetakapp.misoappvinilos.ui.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
@@ -15,6 +16,9 @@ import androidx.navigation.fragment.NavHostFragment
 import com.alphazetakapp.misoappvinilos.R
 import com.alphazetakapp.misoappvinilos.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
+import androidx.navigation.findNavController
+import com.alphazetakapp.misoappvinilos.ui.artist.list.MusicianListFragment
+
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -34,14 +38,23 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
         when (item.itemId) {
             R.id.albums -> {
-                Toast.makeText(this, "Albums selected", Toast.LENGTH_SHORT).show()
+                navController.navigate(R.id.fragment_album_list)
             }
             R.id.artists -> {
-                Toast.makeText(this, "Artists selected", Toast.LENGTH_SHORT).show()
+                // Iniciar la actividad MusicianListFragment
+                //val intent = Intent(this, MusicianListFragment::class.java)
+                //startActivity(intent)
+
+                navController.navigate(R.id.fragment_musician_list) // Navega a MusicianListFragment
+
             }
         }
         return super.onOptionsItemSelected(item)
     }
+
+
 }
