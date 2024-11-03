@@ -84,8 +84,32 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     implementation("androidx.room:room-runtime:${libs.versions.roomCommon.get()}")
     kapt("androidx.room:room-compiler:${libs.versions.roomCommon.get()}")
+    implementation(kotlin("script-runtime"))
+
+    //E2E
+    androidTestImplementation ("androidx.test.espresso:espresso-core:$espressoVersion")
+    // Core library
+    androidTestImplementation("androidx.test:core:1.6.1")
+
+    // AndroidJUnitRunner and JUnit Rules
+    androidTestImplementation("androidx.test:runner:1.6.1")
+
+
+    // Assertions
+    androidTestImplementation("androidx.test.ext:junit:1.2.1")
+    testImplementation("junit:junit:4.13.2") // Or your desired JUnit version
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test:rules:1.5.0")
+
+
+    // Espresso dependencies
+    androidTestImplementation( "androidx.test.espresso:espresso-core:$espressoVersion")
+    androidTestImplementation ("androidx.test.espresso:espresso-contrib:3.4.0")
+
+
 }
 
+val espressoVersion = "3.6.1"
 
 kapt {
     correctErrorTypes = true
