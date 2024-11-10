@@ -52,6 +52,9 @@ class MainActivity : AppCompatActivity() {
                 navController.navigate(R.id.fragment_musician_list) // Navega a MusicianListFragment
 
             }
+            R.id.collector -> {
+                navController.navigate(R.id.fragment_collector_list)
+            }
         }
         return super.onOptionsItemSelected(item)
     }

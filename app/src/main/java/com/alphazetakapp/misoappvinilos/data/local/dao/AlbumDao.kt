@@ -8,10 +8,10 @@ import com.alphazetakapp.misoappvinilos.data.model.Album
 
 @Dao
 interface AlbumDao {
-    @Query("SELECT * FROM albums")
+    @Query("SELECT * FROM album")
     suspend fun getAllAlbums(): List<Album>
 
-    @Query("SELECT * FROM albums WHERE id = :albumId")
+    @Query("SELECT * FROM album WHERE id = :albumId")
     suspend fun getAlbumById(albumId: Int): Album?
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

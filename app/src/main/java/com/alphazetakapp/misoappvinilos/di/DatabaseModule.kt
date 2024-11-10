@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import com.alphazetakapp.misoappvinilos.data.local.AppDatabase
 import com.alphazetakapp.misoappvinilos.data.local.dao.AlbumDao
+import com.alphazetakapp.misoappvinilos.data.local.dao.CollectorDao
 import com.alphazetakapp.misoappvinilos.data.local.dao.MusicianDao
 import dagger.Module
 import dagger.Provides
@@ -25,7 +26,9 @@ object DatabaseModule {
             context,
             AppDatabase::class.java,
             "vinilos_database" //// Database file name
-        ).build()
+
+        ).addMigrations(AppDatabase.MIGRATION_2_3)
+            .build()
     }
 
     @Provides
@@ -38,5 +41,11 @@ object DatabaseModule {
     fun provideMusicianDao(database: AppDatabase): MusicianDao { // Nuevo método
         return database.musicianDao() // Obtener MusicianDao de la base de datos
     }
+
+    @Provides
+    fun provideCollectorDao(database: AppDatabase): CollectorDao { // Nuevo método
+        return database.collectorDao() // Obtener CollectorDao de la base de datos
+    }
+
 
 }

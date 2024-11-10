@@ -8,6 +8,10 @@
     <item android:id="@+id/artists"
         android:title="@string/Artists"
         app:showAsAction="always"/>
+    <item android:id="@+id/collector"
+        android:title="Coleccionistas"
+        app:showAsAction="always"/>
+
 
 
 </menu>

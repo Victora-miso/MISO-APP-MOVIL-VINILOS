@@ -1,6 +1,7 @@
 package com.alphazetakapp.misoappvinilos.di
 
 import com.alphazetakapp.misoappvinilos.data.remote.service.AlbumService
+import com.alphazetakapp.misoappvinilos.data.remote.service.CollectorService
 import com.alphazetakapp.misoappvinilos.data.remote.service.MusicianService
 import com.alphazetakapp.misoappvinilos.utils.NetworkConstants
 import dagger.Module
@@ -42,5 +43,12 @@ object NetworkModule {
     fun provideMusicianService(retrofit: Retrofit): MusicianService {
         return retrofit.create(MusicianService::class.java)
     }
+
+    @Provides
+    @Singleton
+    fun provideCollectorService(retrofit: Retrofit): CollectorService {
+        return retrofit.create(CollectorService::class.java)
+    }
+
 
 }

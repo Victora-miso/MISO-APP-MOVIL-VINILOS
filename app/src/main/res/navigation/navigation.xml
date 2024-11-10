@@ -46,4 +46,28 @@
     </fragment>
 
 
+    <fragment
+        android:id="@+id/fragment_collector_list"
+        android:name="com.alphazetakapp.misoappvinilos.ui.collector.list.CollectorListFragment"
+        android:label="collectorListFragment">
+        <action
+            android:id="@+id/action_collectorList_to_detail"
+            app:destination="@id/frament_collector_detail" >
+            <argument
+                android:name="collectorId"
+                app:argType="integer" />
+
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/frament_collector_detail"
+        android:name="com.alphazetakapp.misoappvinilos.ui.collector.detail.CollectorDetailFragment"
+        android:label="Collector Detail">
+        <argument
+            android:name="collectorId"
+            app:argType="integer" />
+    </fragment>
+
+
 </navigation>
