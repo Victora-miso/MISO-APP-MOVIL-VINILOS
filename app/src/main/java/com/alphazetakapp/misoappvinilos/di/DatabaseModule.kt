@@ -11,6 +11,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.awaitAll
 import javax.inject.Singleton
 
 @Module //Indicates that this class provides dependencies
@@ -27,8 +28,10 @@ object DatabaseModule {
             AppDatabase::class.java,
             "vinilos_database" //// Database file name
 
-        ).addMigrations(AppDatabase.MIGRATION_2_3)
+        ).fallbackToDestructiveMigration()// Opción para permitir migración destructiva
             .build()
+
+
     }
 
     @Provides
