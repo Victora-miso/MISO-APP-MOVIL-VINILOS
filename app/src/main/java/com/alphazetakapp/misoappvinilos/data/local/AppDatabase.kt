@@ -13,7 +13,7 @@ import com.alphazetakapp.misoappvinilos.data.model.Musician
 
 @Database(
     entities = [Album::class, Musician::class, Collector::class],
-    version = 2,
+    version = 3,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
