@@ -5,12 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewbinding.ViewBinding
 import com.alphazetakapp.misoappvinilos.data.model.Collector
 import com.alphazetakapp.misoappvinilos.databinding.ItemCollectorBinding
-
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 
 class CollectorAdapter (
     private val onCollectorClick: (Collector) -> Unit

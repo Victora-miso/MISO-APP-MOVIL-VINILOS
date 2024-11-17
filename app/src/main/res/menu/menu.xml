@@ -4,14 +4,11 @@
 
     <item android:id="@+id/albums"
         android:title="@string/Albums"
-        app:showAsAction="always"/>
+        app:showAsAction="never"/>
     <item android:id="@+id/artists"
         android:title="@string/Artists"
-        app:showAsAction="always"/>
+        app:showAsAction="never"/>
     <item android:id="@+id/collector"
-        android:title="Coleccionistas"
-        app:showAsAction="always"/>
-
-
-
+        android:title="@string/Collectors"
+        app:showAsAction="never"/>
 </menu>

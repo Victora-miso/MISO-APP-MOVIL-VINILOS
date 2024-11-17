@@ -1,15 +1,13 @@
 package com.alphazetakapp.misoappvinilos.ui.artist.detail
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.alphazetakapp.misoappvinilos.R
-import com.alphazetakapp.misoappvinilos.databinding.FragmentMusicianDetailBinding
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
-import com.alphazetakapp.misoappvinilos.ui.artist.detail.MusicianDetailViewModel
+import com.alphazetakapp.misoappvinilos.databinding.FragmentMusicianDetailBinding
 import com.bumptech.glide.Glide
 import dagger.hilt.android.AndroidEntryPoint
 

@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.alphazetakapp.misoappvinilos.data.model.Musician
 import com.alphazetakapp.misoappvinilos.databinding.ItemMusicianBinding
-import com.alphazetakapp.misoappvinilos.ui.artist.list.MusicianAdapter.MusicianDiffCallback
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 

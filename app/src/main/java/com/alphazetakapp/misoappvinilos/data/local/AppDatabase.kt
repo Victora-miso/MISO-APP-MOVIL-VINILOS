@@ -2,8 +2,6 @@ package com.alphazetakapp.misoappvinilos.data.local
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import androidx.room.migration.Migration
-import androidx.sqlite.db.SupportSQLiteDatabase
 import com.alphazetakapp.misoappvinilos.data.local.dao.AlbumDao
 import com.alphazetakapp.misoappvinilos.data.local.dao.CollectorDao
 import com.alphazetakapp.misoappvinilos.data.local.dao.MusicianDao

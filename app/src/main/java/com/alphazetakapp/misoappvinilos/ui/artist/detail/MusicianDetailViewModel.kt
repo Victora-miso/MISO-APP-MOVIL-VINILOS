@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.alphazetakapp.misoappvinilos.data.model.Album
 import com.alphazetakapp.misoappvinilos.data.model.Musician
 import com.alphazetakapp.misoappvinilos.data.repository.MusicianRepository
 import dagger.hilt.android.lifecycle.HiltViewModel

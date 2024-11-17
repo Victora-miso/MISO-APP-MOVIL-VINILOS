@@ -1,12 +1,8 @@
 package com.alphazetakapp.misoappvinilos.data.repository
 
-import com.alphazetakapp.misoappvinilos.data.local.dao.AlbumDao
 import com.alphazetakapp.misoappvinilos.data.local.dao.MusicianDao
-import com.alphazetakapp.misoappvinilos.data.model.Album
 import com.alphazetakapp.misoappvinilos.data.model.Musician
-import com.alphazetakapp.misoappvinilos.data.remote.dto.toAlbum
 import com.alphazetakapp.misoappvinilos.data.remote.dto.toMusician
-import com.alphazetakapp.misoappvinilos.data.remote.service.AlbumService
 import com.alphazetakapp.misoappvinilos.data.remote.service.MusicianService
 import javax.inject.Inject
 

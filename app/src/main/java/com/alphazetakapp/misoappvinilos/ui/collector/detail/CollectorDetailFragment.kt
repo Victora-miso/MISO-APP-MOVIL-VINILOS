@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.alphazetakapp.misoappvinilos.databinding.FragmentCollectorDetailBinding
-import com.alphazetakapp.misoappvinilos.ui.collector.detail.CollectorDetailViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
