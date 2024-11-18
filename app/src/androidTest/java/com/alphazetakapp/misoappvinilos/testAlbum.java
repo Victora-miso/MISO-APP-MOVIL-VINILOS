@@ -7,6 +7,7 @@ import androidx.test.espresso.ViewInteraction;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
@@ -22,16 +23,16 @@ public class testAlbum {
 
     @Test
     public void testListadoAlbum() {
-        ViewInteraction menuAlbum = onView(allOf(withId(R.id.albums), withText("Albums"), isDisplayed()));
-        menuAlbum.perform(click());
+        onView(withContentDescription("More options")).perform(click());
+        onView(withText("Albums")).perform(click());
 
         ViewInteraction listaAlbum = onView(allOf(withId(R.id.albumsRecyclerView), isDisplayed()));
         listaAlbum.check(matches(isDisplayed()));
     }
     @Test
     public void testDetalleAlbum() {
-        ViewInteraction menuAlbum = onView(allOf(withId(R.id.albums), withText("Albums"), isDisplayed()));
-        menuAlbum.perform(click());
+        onView(withContentDescription("More options")).perform(click());
+        onView(withText("Albums")).perform(click());
 
         ViewInteraction listaAlbum = onView(allOf(withId(R.id.albumsRecyclerView), isDisplayed()));
         listaAlbum.check(matches(isDisplayed()));

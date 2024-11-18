@@ -9,6 +9,7 @@ import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.contrib.RecyclerViewActions.actionOnItemAtPosition;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
@@ -21,8 +22,9 @@ public class testArtistas {
 
     @Test
     public void testListadoArtista() {
-        ViewInteraction menuArtista = onView(allOf(withId(R.id.artists), withText("Artists"), isDisplayed()));
-        menuArtista.perform(click());
+        onView(withContentDescription("More options")).perform(click());
+        onView(withText("Artists")).perform(click());
+
 
         ViewInteraction listaArtista = onView(allOf(withId(R.id.musiciansRecyclerView), isDisplayed()));
         listaArtista.check(matches(isDisplayed()));
@@ -30,8 +32,8 @@ public class testArtistas {
 
     @Test
     public void testDetalleArtista() {
-        ViewInteraction menuArtista = onView(allOf(withId(R.id.artists), withText("Artists"), isDisplayed()));
-        menuArtista.perform(click());
+        onView(withContentDescription("More options")).perform(click());
+        onView(withText("Artists")).perform(click());
 
         ViewInteraction listaArtista = onView(allOf(withId(R.id.musiciansRecyclerView), isDisplayed()));
         listaArtista.check(matches(isDisplayed()));

@@ -5,6 +5,7 @@ import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.contrib.RecyclerViewActions.actionOnItemAtPosition;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
@@ -25,16 +26,16 @@ public class testCollector {
 
     @Test
     public void testListadoCollector() {
-        ViewInteraction menuCollector = onView(allOf(withId(R.id.collector), withText("Collectors"), isDisplayed()));
-        menuCollector.perform(click());
+        onView(withContentDescription("More options")).perform(click());
+        onView(withText("Collectors")).perform(click());
 
         ViewInteraction listaCollector = onView(allOf(withId(R.id.CollectorRecyclerView), isDisplayed()));
         listaCollector.check(matches(isDisplayed()));
     }
     @Test
     public void testDetalleCollector() {
-        ViewInteraction menuCollector = onView(allOf(withId(R.id.collector), withText("Collectors"), isDisplayed()));
-        menuCollector.perform(click());
+        onView(withContentDescription("More options")).perform(click());
+        onView(withText("Collectors")).perform(click());
 
         ViewInteraction listaCollector = onView(allOf(withId(R.id.CollectorRecyclerView), isDisplayed()));
         listaCollector.check(matches(isDisplayed()));
