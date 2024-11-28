@@ -55,6 +55,9 @@ class MainActivity : AppCompatActivity() {
             R.id.collector -> {
                 navController.navigate(R.id.fragment_collector_list)
             }
+            R.id.createAlbum -> {
+                navController.navigate(R.id.fragment_album_create)
+            }
         }
         return super.onOptionsItemSelected(item)
     }

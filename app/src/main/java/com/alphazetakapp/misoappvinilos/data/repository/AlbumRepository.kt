@@ -2,6 +2,7 @@ package com.alphazetakapp.misoappvinilos.data.repository
 
 import com.alphazetakapp.misoappvinilos.data.local.dao.AlbumDao
 import com.alphazetakapp.misoappvinilos.data.model.Album
+import com.alphazetakapp.misoappvinilos.data.model.CreateAlbum
 import com.alphazetakapp.misoappvinilos.data.remote.dto.toAlbum
 import com.alphazetakapp.misoappvinilos.data.remote.service.AlbumService
 import javax.inject.Inject
@@ -43,6 +44,20 @@ class AlbumRepository @Inject constructor(
                 cachedAlbum?.let {
                     Result.success(it)
                 } ?: Result.failure(Exception("Album not found in cache"))
+            }
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+    suspend fun createAlbum(album: CreateAlbum): Result<Album> {
+        return try {
+            val response = albumService.createAlbum(album)
+            if (response.isSuccessful) {
+                response.body()?.let {albumDTO ->
+                    Result.success(albumDTO.toAlbum())
+                } ?: Result.failure(Exception("No album returned from server"))
+            } else {
+                Result.failure(Exception("Failed to create album: ${response.errorBody()?.string()}"))
             }
         } catch (e: Exception) {
             Result.failure(e)

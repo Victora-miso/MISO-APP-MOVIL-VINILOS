@@ -11,4 +11,7 @@
     <item android:id="@+id/collector"
         android:title="@string/Collectors"
         app:showAsAction="never"/>
+    <item android:id="@+id/createAlbum"
+        android:title="@string/NewAlbum"
+        app:showAsAction="never"/>
 </menu>

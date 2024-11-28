@@ -8,6 +8,19 @@
     <string name="Albums">Albums</string>
     <string name="Artists">Artists</string>
     <string name="Collectors">Collectors</string>
+    <string name="NewAlbum">New Album</string>
+    <string name="HintTitle">Name</string>
+    <string name="HintDescription">Description</string>
+    <string name="HintGenre">Genre</string>
+    <string name="HintLabel">Record Label</string>
+    <string name="HintCover">Image Link</string>
+    <string name="AlbumName">Album Name: </string>
+    <string name="AlbumCover">Album Cover: </string>
+    <string name="AlbumDate">Release Date: </string>
+    <string name="AlbumDesc">Description: </string>
+    <string name="AlbumGenre">Genre: </string>
+    <string name="AlbumLabel">Record Label: </string>
+    <string name="AlbumButton">Create</string>
 
     <string name="album_card_description">Tarjeta de información del álbum</string>
 </resources>

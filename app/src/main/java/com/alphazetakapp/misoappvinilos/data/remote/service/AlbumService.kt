@@ -1,9 +1,12 @@
 package com.alphazetakapp.misoappvinilos.data.remote.service
 
 import com.alphazetakapp.misoappvinilos.data.remote.dto.AlbumDTO
+import com.alphazetakapp.misoappvinilos.data.model.CreateAlbum
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.POST
+import retrofit2.http.Body
 
 interface AlbumService {
     @GET("albums")
@@ -11,4 +14,7 @@ interface AlbumService {
 
     @GET("albums/{id}")
     suspend fun getAlbumById(@Path("id") id: Int): Response<AlbumDTO>
+
+    @POST("albums")
+    suspend fun createAlbum(@Body album: CreateAlbum): Response<AlbumDTO>
 }
