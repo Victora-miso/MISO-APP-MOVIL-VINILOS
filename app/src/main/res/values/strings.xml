@@ -1,10 +1,12 @@
 <resources>
     <string name="app_name">MisoAppVinilos</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="album_cover">Album Cover</string>
+    <string name="album_cover">Portada del álbum</string>
     <string name="error_loading_albums">Error loading albums</string>
     <string name="error_loading_album_details">Error loading album details</string>
     <string name="Albums">Albums</string>
     <string name="Artists">Artists</string>
     <string name="Collectors">Collectors</string>
+
+    <string name="album_card_description">Tarjeta de información del álbum</string>
 </resources>
