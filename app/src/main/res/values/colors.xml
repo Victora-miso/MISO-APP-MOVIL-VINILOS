@@ -5,5 +5,6 @@
     <color name="purple_primary">#D0BCFF</color>
 
     <color name="text_high_emphasis">#DE000000</color> <!-- 87% negro para texto principal -->
-    <color name="text_medium_emphasis">#99000000</color> <!-- 60% negro para texto secundario -->
+    <color name="text_medium_emphasis">#99000000</color>
+    <color name="primary_text">#02439D</color> <!-- 60% negro para texto secundario -->
 </resources>

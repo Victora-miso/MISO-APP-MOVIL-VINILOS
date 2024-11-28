@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,11 +14,12 @@
             android:id="@+id/musicianImageView"
             android:layout_width="0dp"
             android:layout_height="300dp"
-            android:contentDescription="musician_image"
+            android:contentDescription="@string/musician_image"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck"
             tools:src="@tools:sample/backgrounds/scenic" />
 
         <TextView
@@ -27,6 +29,7 @@
             android:layout_margin="16dp"
             android:textSize="24sp"
             android:textStyle="bold"
+            android:textColor="@color/primary_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/musicianImageView"
@@ -70,7 +73,7 @@
 
         <TextView
             android:id="@+id/errorTextView"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:textAlignment="center"
