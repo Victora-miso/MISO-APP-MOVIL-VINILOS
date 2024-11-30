@@ -25,6 +25,19 @@
     <string name="TrackName">Track Name: </string>
     <string name="TrackDuration">Track Duration: </string>
     <string name="HintDuration">Duration</string>
+    <string-array name="genre_options">
+        <item>Classical</item>
+        <item>Salsa</item>
+        <item>Rock</item>
+        <item>Folk</item>
+    </string-array>
+    <string-array name="label_options">
+        <item>Sony Music</item>
+        <item>EMI</item>
+        <item>Discos Fuentes</item>
+        <item>Elektra</item>
+        <item>Fania Records</item>
+    </string-array>
 
     <string name="album_card_description">Tarjeta de información del álbum</string>
 </resources>
