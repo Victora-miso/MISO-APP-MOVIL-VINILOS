@@ -3,6 +3,7 @@ package com.alphazetakapp.misoappvinilos.data.repository
 import com.alphazetakapp.misoappvinilos.data.local.dao.AlbumDao
 import com.alphazetakapp.misoappvinilos.data.model.Album
 import com.alphazetakapp.misoappvinilos.data.model.CreateAlbum
+import com.alphazetakapp.misoappvinilos.data.model.Track
 import com.alphazetakapp.misoappvinilos.data.remote.dto.toAlbum
 import com.alphazetakapp.misoappvinilos.data.remote.service.AlbumService
 import javax.inject.Inject
@@ -24,7 +25,7 @@ class AlbumRepository @Inject constructor(
                     Result.success(albums)
                 } ?: Result.failure(Exception("Data is null"))
             } else {
-                // If the API fails, we try recovery from cache
+                // If the A  PI fails, we try recovery from cache
                 Result.success(albumDao.getAllAlbums())
             }
         } catch (e: Exception) {
@@ -63,6 +64,19 @@ class AlbumRepository @Inject constructor(
             Result.failure(e)
         }
     }
+    suspend fun associateTrack(albumId:Int, track:Track): Result<Boolean> {
+        return try {
+            val response = albumService.associateTrack(albumId,track)
+            if (response.isSuccessful) {
+                Result.success(true)
+            } else {
+                Result.failure(Exception("Failed to associate track: ${response.errorBody()?.string()}"))
+            }
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+
 }
 
 

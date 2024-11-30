@@ -21,6 +21,10 @@
     <string name="AlbumGenre">Genre: </string>
     <string name="AlbumLabel">Record Label: </string>
     <string name="AlbumButton">Create</string>
+    <string name="Track">Associate Track</string>
+    <string name="TrackName">Track Name: </string>
+    <string name="TrackDuration">Track Duration: </string>
+    <string name="HintDuration">Duration</string>
 
     <string name="album_card_description">Tarjeta de información del álbum</string>
 </resources>

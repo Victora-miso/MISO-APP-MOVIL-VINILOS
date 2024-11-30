@@ -58,6 +58,9 @@ class MainActivity : AppCompatActivity() {
             R.id.createAlbum -> {
                 navController.navigate(R.id.fragment_album_create)
             }
+            R.id.associateTrack -> {
+                navController.navigate(R.id.fragment_associate_track)
+            }
         }
         return super.onOptionsItemSelected(item)
     }
