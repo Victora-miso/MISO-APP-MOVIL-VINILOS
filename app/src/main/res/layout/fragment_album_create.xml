@@ -74,14 +74,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/inputCoverText"/>
-        <EditText
+        <TextView
             android:id="@+id/inputDateText"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_margin="16dp"
-            android:hint="@string/HintTitle"
-            android:inputType="text"
-            android:autofillHints="date"
+            android:hint="@string/HintDate"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:inputType="none"
+            android:focusable="true"
+            android:clickable="true"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintWidth_max="488dp"
