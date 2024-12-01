@@ -14,6 +14,7 @@
     <string name="HintGenre">Genre</string>
     <string name="HintLabel">Record Label</string>
     <string name="HintCover">Image Link</string>
+    <string name="HintDate">Date</string>
     <string name="AlbumName">Album Name: </string>
     <string name="AlbumCover">Album Cover: </string>
     <string name="AlbumDate">Release Date: </string>
@@ -38,6 +39,9 @@
         <item>Elektra</item>
         <item>Fania Records</item>
     </string-array>
-
+    <string name="error_name_required">El nombre es obligatorio.</string>
+    <string name="error_cover_required">El cover es obligatorio.</string>
+    <string name="error_date_required">La fecha es obligatoria.</string>
+    <string name="album_created_success">Album creado</string>
     <string name="album_card_description">Tarjeta de información del álbum</string>
 </resources>
