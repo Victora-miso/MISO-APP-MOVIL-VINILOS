@@ -20,4 +20,5 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun collectorDao(): CollectorDao
 
 
+
 }

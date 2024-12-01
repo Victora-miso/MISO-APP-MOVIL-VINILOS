@@ -25,4 +25,10 @@ interface AlbumService {
         @Path("new_id_a") albumId: Int,
         @Body track: Track
     ): Response<TrackDTO>
+
+    @GET("albums/{new_id_a}/tracks")
+    suspend fun getTracksByAlbumId(
+        @Path("new_id_a") albumId: Int
+    ): Response<List<TrackDTO>>
+
 }
