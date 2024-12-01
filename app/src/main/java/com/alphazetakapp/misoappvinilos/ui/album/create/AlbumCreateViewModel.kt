@@ -1,27 +1,23 @@
-package com.alphazetakapp.misoappvinilos.ui.album.detail
+package com.alphazetakapp.misoappvinilos.ui.album.create
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.alphazetakapp.misoappvinilos.data.model.CreateAlbum
 import com.alphazetakapp.misoappvinilos.data.model.Album
-import com.alphazetakapp.misoappvinilos.data.model.Track
 import com.alphazetakapp.misoappvinilos.data.repository.AlbumRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class AlbumDetailViewModel @Inject constructor(
+class CreateAlbumViewModel @Inject constructor(
     private val repository: AlbumRepository
 ): ViewModel() {
 
-    private val _track = MutableLiveData<List<Track>>()
-    val track: LiveData<List<Track>> = _track
-
-    private val _album = MutableLiveData<Album>()
-    val album: LiveData<Album> = _album
+    private val _albumCreated = MutableLiveData<Album?>()
+    val albumCreated: LiveData<Album?> = _albumCreated
 
     private val _loading = MutableLiveData<Boolean>()
     val loading: LiveData<Boolean> = _loading
@@ -29,22 +25,14 @@ class AlbumDetailViewModel @Inject constructor(
     private val _error = MutableLiveData<String?>()
     val error: LiveData<String?> = _error
 
-    fun loadAlbum(albumId: Int) {
+    fun createAlbum(album: CreateAlbum) {
         viewModelScope.launch {
             try {
                 _loading.value = true
                 _error.value = null
-                val result = repository.getAlbumById(albumId)
-                result.onSuccess { album ->
-                    _album.value = album
-                    Log.d("AlbumDetailViewModel", "Album loaded: $album")
-                    val tracksResult = repository.getTracksByAlbumId(albumId)
-                    tracksResult.onSuccess { tracks ->
-                        _track.value = tracks
-                        Log.d("AlbumDetailViewModel", "Tracks loaded: $tracks")
-                    }.onFailure { exception ->
-                        _error.value = exception.message
-                    }
+                val result = repository.createAlbum(album)
+                result.onSuccess { newAlbum ->
+                    _albumCreated.value = newAlbum
                 }.onFailure { exception ->
                     _error.value = exception.message
                 }

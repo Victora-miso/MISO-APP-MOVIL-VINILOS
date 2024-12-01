@@ -68,6 +68,19 @@
             android:name="collectorId"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/fragment_album_create"
+        android:name="com.alphazetakapp.misoappvinilos.ui.album.create.CreateAlbumFragment"
+        android:label="Create Album">
+        <action
+            android:id="@+id/action_albumCreate_to_detail"
+            app:destination="@id/fragment_album_detail" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_associate_track"
+        android:name="com.alphazetakapp.misoappvinilos.ui.album.associate.AssociateTrackFragment"
+        android:label="Associate Track">
+    </fragment>
 
 
 </navigation>

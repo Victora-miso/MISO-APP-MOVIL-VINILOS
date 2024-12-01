@@ -12,12 +12,13 @@ import com.alphazetakapp.misoappvinilos.data.model.Musician
 @Database(
     entities = [Album::class, Musician::class, Collector::class],
     version = 3,
-    exportSchema = false
+    exportSchema = false,
 )
 abstract class AppDatabase : RoomDatabase() {
     abstract fun albumDao(): AlbumDao
     abstract fun musicianDao(): MusicianDao
     abstract fun collectorDao(): CollectorDao
+
 
 
 }

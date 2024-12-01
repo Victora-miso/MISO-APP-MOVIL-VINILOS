@@ -1,10 +1,47 @@
 <resources>
     <string name="app_name">MisoAppVinilos</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="album_cover">Album Cover</string>
+    <string name="album_cover">Portada del álbum</string>
+    <string name="musician_image">Portada del artista</string>
     <string name="error_loading_albums">Error loading albums</string>
     <string name="error_loading_album_details">Error loading album details</string>
     <string name="Albums">Albums</string>
     <string name="Artists">Artists</string>
     <string name="Collectors">Collectors</string>
+    <string name="NewAlbum">New Album</string>
+    <string name="HintTitle">Name</string>
+    <string name="HintDescription">Description</string>
+    <string name="HintGenre">Genre</string>
+    <string name="HintLabel">Record Label</string>
+    <string name="HintCover">Image Link</string>
+    <string name="HintDate">Date</string>
+    <string name="AlbumName">Album Name: </string>
+    <string name="AlbumCover">Album Cover: </string>
+    <string name="AlbumDate">Release Date: </string>
+    <string name="AlbumDesc">Description: </string>
+    <string name="AlbumGenre">Genre: </string>
+    <string name="AlbumLabel">Record Label: </string>
+    <string name="AlbumButton">Create</string>
+    <string name="Track">Associate Track</string>
+    <string name="TrackName">Track Name: </string>
+    <string name="TrackDuration">Track Duration: </string>
+    <string name="HintDuration">Duration</string>
+    <string-array name="genre_options">
+        <item>Classical</item>
+        <item>Salsa</item>
+        <item>Rock</item>
+        <item>Folk</item>
+    </string-array>
+    <string-array name="label_options">
+        <item>Sony Music</item>
+        <item>EMI</item>
+        <item>Discos Fuentes</item>
+        <item>Elektra</item>
+        <item>Fania Records</item>
+    </string-array>
+    <string name="error_name_required">El nombre es obligatorio.</string>
+    <string name="error_cover_required">El cover es obligatorio.</string>
+    <string name="error_date_required">La fecha es obligatoria.</string>
+    <string name="album_created_success">Album creado</string>
+    <string name="album_card_description">Tarjeta de información del álbum</string>
 </resources>

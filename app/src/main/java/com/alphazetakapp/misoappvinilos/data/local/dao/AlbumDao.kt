@@ -5,6 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.alphazetakapp.misoappvinilos.data.model.Album
+import com.alphazetakapp.misoappvinilos.data.model.Track
 
 @Dao
 interface AlbumDao {

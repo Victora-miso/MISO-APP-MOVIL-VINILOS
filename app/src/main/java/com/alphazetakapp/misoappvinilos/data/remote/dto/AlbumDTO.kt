@@ -1,6 +1,7 @@
 package com.alphazetakapp.misoappvinilos.data.remote.dto
 
 import com.alphazetakapp.misoappvinilos.data.model.Album
+import com.alphazetakapp.misoappvinilos.data.model.Track
 import com.google.gson.annotations.SerializedName
 
 //Estructura de respuesta de la api de vinilos

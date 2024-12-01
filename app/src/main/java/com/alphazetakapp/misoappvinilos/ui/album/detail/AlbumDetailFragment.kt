@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
+import androidx.recyclerview.widget.LinearLayoutManager
+
 import com.alphazetakapp.misoappvinilos.databinding.FragmentAlbumDetailBinding
 import com.bumptech.glide.Glide
 import dagger.hilt.android.AndroidEntryPoint
@@ -18,6 +20,7 @@ class AlbumDetailFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel: AlbumDetailViewModel by viewModels()
+    private lateinit var albumDetailAdapter: AlbumDetailAdapter
     private val args: AlbumDetailFragmentArgs by navArgs()
 
     override fun onCreateView(
@@ -31,6 +34,8 @@ class AlbumDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        albumDetailAdapter = AlbumDetailAdapter()
+        setupRecyclerView()
         setupObservers()
         viewModel.loadAlbum(args.albumId)
     }
@@ -61,6 +66,17 @@ class AlbumDetailFragment : Fragment() {
                 text = errorMessage
             }
         }
+        viewModel.track.observe(viewLifecycleOwner) { tracks ->
+            albumDetailAdapter.submitList(tracks)
+        }
+    }
+
+    private fun setupRecyclerView() {
+        binding.tracksRecyclerView.apply {
+            adapter = albumDetailAdapter
+            layoutManager = LinearLayoutManager(context)
+        }
+
     }
 
     override fun onDestroyView() {
